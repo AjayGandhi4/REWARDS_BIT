@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Messages | Firebase</title>
+    <link rel="stylesheet" href="./formstyle1.css">
+</head>
+
+<body>
+    <div class="container">
+        <form  onsubmit="callValue()" id="contactForm">
+            <div class="alert">Your message sent</div>
+
+            <div class="inputBox">
+                <input type="text" id="name" placeholder="Student name" />
+            </div>
+
+            <div class="inputBox">
+                <input type="text" id="name2" placeholder="Student rollnumber" />
+            </div>
+
+            <div class="inputBox">
+                <input type="text" id="name3"  placeholder="Event name"/>
+            </div>
+            <div class="inputBox">
+                <input type="text" id="name4"  placeholder="Assessment link"/>
+            </div>
+            <div class="inputBox">
+                <input type="text" id="name5"  placeholder="Attendance percentage"/>
+            </div>
+            <div class="inputBox">
+                <input type="text" id="name6"  placeholder="Reward Points Allocated"/>
+            </div>
+
+            <div class="inputBox">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function callValue(){
+        var name=document.getElementById("name").value;
+        var name2=document.getElementById("name2").value;
+        var name3=document.getElementById("name3").value;
+        var name4=document.getElementById("name4").value;
+        var name5=document.getElementById("name5").value;
+        var name6=document.getElementById("name6").value;
+        document.writeln("Student name:"+name+"<br>"+"Student rollnumber:"+name2+"<br>"+"Event name:"+name3+"<br>"+" Assessment link:"+name4+"<br>"+"Attendence percentage:"+name5+"<br>"+"Reward points allocated:"+name6);}
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase1.js"></script>
+    <script src="./firebase1.js"></script>
+</body>
+
+</html>

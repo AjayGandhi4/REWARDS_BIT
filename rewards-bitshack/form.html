@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Messages | Firebase</title>
+    <link rel="stylesheet" href="./formstyle.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="admin.html" method="post" onsubmit="callValue()" id="contactForm">
+            <div class="alert">Your message sent</div>
+
+            <div class="inputBox">
+                <input type="text" id="name" placeholder="Event name" />
+            </div>
+
+            <div class="inputBox">
+                <input type="text" id="name2" placeholder="Event Duration" />
+            </div>
+
+            <div class="inputBox">
+                <input type="text" id="name3"  placeholder="Event Mode"/>
+            </div>
+            <div class="inputBox">
+                <input type="text" id="name4"  placeholder="Reward Points Allocated"/>
+            </div>
+
+            <div class="inputBox">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function callValue(){
+        var name=document.getElementById("name").value;
+        var name2=document.getElementById("name2").value;
+        var name3=document.getElementById("name3").value;
+        var name4=document.getElementById("name4").value;
+        document.writeln("Event:"+name+"<br>"+"Duration:"+name2+"<br>"+"Mode:"+name3+"<br>"+"link:"+name4);}
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./firebase.js"></script>
+</body>
+
+</html>

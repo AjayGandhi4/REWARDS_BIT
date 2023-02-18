@@ -1,0 +1,121 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin's approval</title>
+	<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+
+	<style>
+		body{
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(120deg,#2980b9, #dd6893);
+  height: 100vh;
+  overflow: hidden;
+}
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		th, td {
+			border: 1px solid #ddd;
+			padding: 8px;
+			text-align: left;
+			font-size: 25px;
+		}
+
+		th {
+			background-color: #f2f2f2;
+			color: #333;
+		}
+
+		a {
+			color: #161819;
+			text-decoration: none;
+			font-size: 25px;
+			
+		}
+
+		
+	</style>
+</head>
+<body>
+	<h1 style="color:white">&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp; 	&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;&nbsp;&ensp;ADMIN'S APPROVAL</h1>
+
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Duration</th>
+			<th>Mode</th>
+			<th>Link</th>
+		</tr>
+		<tr>
+			<td id="name"></td>
+			<td id="duration"></td>
+			<td id="mode"></td>
+			<td id="link"></td>
+		</tr>
+	</table>
+
+	<!-- Firebase Configuration -->
+	<!-- <script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js"></script> -->
+	<script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+			apiKey: "AIzaSyAQeXRQmeV_M8oaLhvkwHgfeNfdnM4joQQ",
+    authDomain: "bithacks-47e00.firebaseapp.com",
+    databaseURL: "https://bithacks-47e00-default-rtdb.firebaseio.com",
+    projectId: "bithacks-47e00",
+    storageBucket: "bithacks-47e00.appspot.com",
+    messagingSenderId: "16078435309",
+    appId: "1:16078435309:web:334368b2645c9fc3de2de4"
+		};
+
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+
+		// Get a reference to the database service
+		var database = firebase.database();
+
+		// Get the URL parameters
+		var urlParams = new URLSearchParams(window.location.search);
+		var name = urlParams.get("name");
+		var duration = urlParams.get("duration");
+		var mode = urlParams.get("mode");
+		var link = urlParams.get("link");
+
+		console.log(name);
+
+		// Set the table cell values
+		document.getElementById("name").textContent = name;
+		document.getElementById("duration").textContent = duration;
+		document.getElementById("mode").textContent = mode;
+		document.getElementById("link").innerHTML = '<a href="' + link + '">' + link + '</a>';
+
+	</script>
+
+<div class="inputBox">
+	 <a href="indexnew.html">
+	<div>&nbsp;&ensp;&ensp;&ensp;&nbsp;&ensp;<button type="submit">Approve</button></a></div>
+	<style>.inputBox button{
+		margin-left: 550px;
+		width: 20%;    
+		padding: 10px 10px;
+		border: none;
+		outline: none;
+		background: rgb(0, 119, 255);
+		color: #FFF;
+		font-size: 20px;
+		font-weight: bold;
+		cursor: pointer;
+	}
+		
+	</style>
+</div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Input Form</title>
+	<link rel="stylesheet" href="./input-form-style.css">
+	
+	<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+</head>
+	
+<body>
+	<h1>Admin's  approval</h1>
+	<div class="container">
+	<!-- Form to collect input data -->
+	<form id="input-form">
+		<!-- <label for="name">Name:</label>
+		<input type="text" name="name" id="name" required>
+
+		<label for="duration">Duration:</label>
+		<input type="text" name="duration" id="duration" required>
+
+		<label for="mode">Mode:</label>
+		<input type="text" name="mode" id="mode" required>
+
+		<label for="link">Link:</label>
+		<input type="text" name="link" id="link" required> -->
+		<div class="alert">Your message sent</div>
+
+            <div class="inputBox">
+                <input type="text" id="name" placeholder="Student name" />
+            </div>
+
+            <div class="inputBox">
+                <input type="text" id="duration" placeholder="Student rollnumber" />
+            </div>
+
+            <div class="inputBox">
+                <input type="text" id="mode"  placeholder="Event name"/>
+            </div>
+            <div class="inputBox">
+                <input type="text" id="link"  placeholder="Assessment link"/>
+            </div>
+
+
+		            <div class="inputBox">
+                <button type="submit">Submit</button>
+            </div>
+	</form>
+	</div>
+
+	<!-- Firebase Configuration -->
+	<!-- <script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js"></script> -->
+	<script>
+		// Your web app's Firebase configuration
+		const firebaseConfig = {
+  apiKey: "AIzaSyAQeXRQmeV_M8oaLhvkwHgfeNfdnM4joQQ",
+  authDomain: "bithacks-47e00.firebaseapp.com",
+  databaseURL: "https://bithacks-47e00-default-rtdb.firebaseio.com",
+  projectId: "bithacks-47e00",
+  storageBucket: "bithacks-47e00.appspot.com",
+  messagingSenderId: "16078435309",
+  appId: "1:16078435309:web:334368b2645c9fc3de2de4"
+};
+
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+
+		// Get a reference to the database service
+		var database = firebase.database();
+
+		// Handle form submission
+		var inputForm = document.getElementById("input-form");
+		inputForm.addEventListener("submit", function(event) {
+			event.preventDefault(); // prevent default form submission
+
+			// Get form data
+			var formData = {
+				name: document.getElementById("name").value,
+				duration: document.getElementById("duration").value,
+				mode: document.getElementById("mode").value,
+				link: document.getElementById("link").value
+			};
+
+			// Store form data in Firebase
+			database.ref("data").push(formData);
+
+			// Redirect to output data page with form data as URL parameters
+			var queryString = "?name=" + encodeURIComponent(formData.name) + "&duration=" + encodeURIComponent(formData.duration) + "&mode=" + encodeURIComponent(formData.mode) + "&link=" + encodeURIComponent(formData.link);
+			window.open("output-data.html" + queryString);
+		});
+	</script>
+</body>
+</html>

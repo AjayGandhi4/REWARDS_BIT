@@ -1,0 +1,87 @@
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>Rewards BIT</title>
+
+
+<style>
+#myHeader {  
+color: white;
+padding: 10px;
+font-family:lucida calligraphy;
+}
+#para {
+color: white;  
+font-family:cooper;
+font-size: 27px
+}
+</style>
+<style>
+.two {
+  list-style: square inside;
+}
+.city {
+background-color:indigo;
+color: white;
+border: 2px solid black;
+margin: 20px;
+padding: 20px;
+text-align: center;
+}
+</style>
+<style>
+body {
+margin: 0;
+font-family:sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+topnav a.active {
+background-color: #04AA6D;
+color: white;
+}
+</style>
+<style>
+body {
+background-image: url('https://i.gifer.com/Q8i2.gif');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 100%;
+}
+
+</style>
+</head>
+<body>
+
+<div class="topnav">
+<a class="active" href="mkTravels.html">Home</a>
+<a href="index1.html">Faculty login</a>
+<a href="index.html">Student login</a>
+<a href="index.html">Admin</a>
+<a href="sindex.html">Students dashboard</a>
+
+</div>
+
+</div>
+
+<video src="particles.mp4" muted="" autoplay=""></video>
+<h2 style="color:white;font-family:cooper;font-size:300%;"><br><center><b>Reward Points Portal</b></center></br></h2>
+
+
+</body>
+</html>
